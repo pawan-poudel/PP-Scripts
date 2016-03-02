@@ -1,0 +1,21 @@
+# load R
+#
+#please not that matrxi doesnot contains na vaulues or etc
+# the nmf package need an eset object, it has following constraints: data must
+# be numeric, non negetive, so I have converted the data to exponent and added
+# 1 to the data matrix which makes every thing non negetive
+#
+
+
+# step 1: export the libraries
+export R_LIBS="/scratch/molecpath/ppoudel/apps/R-packages/R-2.15.2/"
+
+# step 2: load the modules
+module load R/3.1.2 openmpi/1.6.5 
+
+# step 3:  first submit a job using bsub 
+bsub -P DMPPHDAAO -W 8:00 -n 5 -R "span[hosts=1]" -Is /bin/bash
+
+#step 4: run mip, change your arguments accordingly
+
+mpirun -np 1 Rscript --no-save /scratch/molecpath/ppoudel/scripts/MOT-Assigner-V1/MOT-assigner-main.R -d /scratch/molecpath/ppoudel/datadir/MULTIORGAN_FREEZE_RMA/RMA_NORMALISED/ -O /scratch/molecpath/ppoudel/analysis/ -p TEST-PP-trial2 -s 1 -i 2 -f 10

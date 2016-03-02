@@ -1,0 +1,2 @@
+cels = list.files(path=data_dir, pattern = "txt", ignore.case=TRUE)
+}
