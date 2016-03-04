@@ -237,6 +237,15 @@ for(k in init:final)
   my_file <- do_silhoutte(data_file=batch_corrected_file, consensus_file=cf,silhoutte_dir=silhoutte_dir, info=info, k=k )
   plot_silhoutte(my_file)  
   
+  cat("SAM and PAM for Silhoutte selected samples")
+  sil <- paste0("_NMF_",k, "_positive_silhoutte_samples.txt")
+  
+  sil_corrected_file <- list.files(path=silhoutte_dir, pattern=sil, full.names = TRUE)
+  # do the sam for silhoutt selected samples
+  sam_file_sil=run_sam(combat_file = sil_corrected_file, outputdir=silhoutte_dir, classification_file=cf,info=info, k=k, log_file=log_f)
+  
+  #do the pam for silhoutte selected sampels
+  do_pam(sam_selected_data_file=sam_file_sil,outputdir=silhoutte_dir, classification_file=cf,k=k, info=info,log_file=log_f)
   
   # plotting the proportion of silhoutte selected samples
   

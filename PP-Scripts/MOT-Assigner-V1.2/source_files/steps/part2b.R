@@ -24,6 +24,12 @@ run_sam <- function(combat_file, outputdir, classification_file, info, k, log_fi
     #reading the sample classification file, it could be from the user input or from the nmf classification from this pipeline
 	combat_gct<- read.delim(classification_file, sep="\t", header=TRUE)
     
+    m1 <- match(combat_gct[,1], colnames(combat))
+    w1 <- which(!is.na(m1))
+    
+    combat <- combat[,c(1, m1[w1])]
+    combat_gct <- combat_gct[w1,]
+    
     #ordering the membership files
 	combat_gct_o <- combat_gct[order(combat_gct[,2]),]
 
@@ -101,6 +107,13 @@ do_pam <- function(sam_selected_data_file, outputdir, classification_file, k, in
 	#reading the membership information file
 	combat_gct <- read.delim2(classification_file, sep="\t", header=TRUE)
 	
+    m1 <- match(combat_gct[,1], colnames(expression_data))
+    w1 <- which(!is.na(m1))
+    
+    expression_data <- expression_data[,c(1, m1[w1])]
+    combat_gct <- combat_gct[w1,]
+    
+    
 	#order the data by the membership
 	lable_data <- combat_gct[order(combat_gct[,2]),]
 	
@@ -132,7 +145,7 @@ do_pam <- function(sam_selected_data_file, outputdir, classification_file, k, in
 		
 		#plotting the pam threshold information
 		pamr.plotcv(mycv)
-		pp <- paste0(d, "/", info, "Combar_rowMed_CV_K_",k,"_PAM_plot.pdf")
+		pp <- paste0(d, "/", info, "Combat_rowMed_CV_K_",k,"_PAM_plot.pdf")
   		pdf(pp)
   		pamr.plotcv(mycv)
   		dev.off()
