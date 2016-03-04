@@ -1,1 +1,30 @@
-exportPattern("^[[:alpha:]]+")
+# Export all the names
+export(
+	"run_qc",
+        "theme_Publication",
+        "scale_fill_Publication",
+        "scale_colour_Publication",
+        "makePcaPlot",
+        "impute_missing_values",
+        "plot_hist",
+	"plot_mean_median",
+        "sample_sample_coor",
+        "se",
+        "standardise_data",
+        "check_dist_zscore_coor"
+)
+
+import("AnnotationDbi")
+import("hgu133plus2.db")
+import("affyPLM")
+import("RColorBrewer")
+import("sva")
+import("affy")
+import("impute")
+import("lattice")
+import("matrixStats")
+import("grid")
+import("ggthemes")
+import("ggplot2")
+import("reshape")
+import("scales")

@@ -1,6 +1,5 @@
 \name{scale_fill_Publication}
 \alias{scale_fill_Publication}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Additional ggplot settings for fill
 }
@@ -13,33 +12,14 @@ scale_fill_Publication(...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+Setting for the ggolot2
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Anguraj Sadanandam, et all (2016), MOTassigner
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----

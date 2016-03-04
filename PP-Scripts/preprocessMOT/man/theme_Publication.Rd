@@ -1,51 +1,26 @@
 \name{theme_Publication}
 \alias{theme_Publication}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-
-ggplot theme for publications
-
-}
-\description{
-ggplot theme for publications
-}
+\title{ggplot theme for publications}
+\description{ggplot theme for publications}
 \usage{
 theme_Publication(base_size = 14, base_family = "Helvetica")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{base_size}{
-%%     ~~Describe \code{base_size} here~~
+font size for the plot
 }
   \item{base_family}{
-%%     ~~Describe \code{base_family} here~~
+font family
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Additional setting for the ggplot
 }
 \references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+Anguraj Sadanandam, et all (2016), MOTassigner
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,

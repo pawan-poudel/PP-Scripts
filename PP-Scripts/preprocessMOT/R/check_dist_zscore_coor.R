@@ -1,7 +1,7 @@
 check_dist_zscore_coor <-
 function(file){
   
-  my_file=read.delim2(file, sep="\t", head=TRUE)
+  my_file=read.delim2(file, sep="\t", header=TRUE)
   samples=colnames(my_file)[-1]
   sample_info=data.frame(samples, paste0("Organ-",rep(1, length(samples)) ))
   
@@ -12,7 +12,7 @@ function(file){
   #checking if any NAs are available in the data sets, some time imputation needs to be done if the data has NA values
   if(length(is_na)>0){
     
-    my_imputed_file=impute_missing_values(my_file, filename)
+    my_imputed_file=impute_missing_values(my_file)
     
     #settting the filename for the imputed file
     filename=gsub(".txt","imputed.txt", file)

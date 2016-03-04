@@ -241,6 +241,7 @@ for(k in init:final)
   # plotting the proportion of silhoutte selected samples
   
   f <- list.files(path=silhoutte_dir,pattern="_silhoutte_result.txt", recursive = TRUE, full.names = TRUE)
+  
   lapply(f, produce_pie_chart_silhoutte)
   
   

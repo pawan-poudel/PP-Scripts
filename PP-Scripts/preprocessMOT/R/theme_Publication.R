@@ -1,7 +1,7 @@
 theme_Publication <-
 function(base_size=14, base_family="Helvetica") {
-  library(grid)
-  library(ggthemes)
+    # require(grid)
+    #require(ggthemes)
   (theme_foundation(base_size=base_size, base_family=base_family)
    + theme(plot.title = element_text(face = "bold",
                                      size = rel(1.2), hjust = 0.5),

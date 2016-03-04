@@ -8,7 +8,10 @@ Date: 2016-03-03
 Author: Pawan Poudel
 Maintainer: Pawan Poudel <paawanpoudel@gmail.com>
 Description: This package takes a data matrix (genes/features in the first column followed by samples) as input and then performs initial quality control for the downstream analysis.
-License: GPL=>2
-Imports: hgu133plus2.db, affyPLM, RColorBrewer, sva, affy, impute,
-        lattice, matrixStats
-Packaged: 2016-03-03 13:31:29 UTC; ppoudel
+License: GPL-2
+NeedsCompilation: no
+Encoding: UTF-8
+Packaged: 2016-03-04 13:11:28 UTC; ppoudel
+Imports: AnnotationDbi, hgu133plus2.db, affyPLM, RColorBrewer, sva,
+        affy, impute, lattice, matrixStats, grid, ggthemes, ggplot2,
+        reshape, scales
