@@ -1,0 +1,15 @@
+# Export all the names
+export(
+	"correlationAssigner",
+        "create_sample_info",
+        "create_subtype_prop_plot",
+        "impute_screenExpr",
+        "run_CorrelationAssigner"
+)
+
+import("RColorBrewer")
+import("ggthemes")
+import("impute")
+import("ggplot2")
+import("reshape")
+import("scales")
