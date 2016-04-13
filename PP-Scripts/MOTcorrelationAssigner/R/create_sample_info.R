@@ -16,7 +16,7 @@ function(project_folder, outputdir){
     
     if(file.exists(sample_info_file)){
       
-      cat("Using the sample info file")
+      cat("Using the sample info file ", sample_info_file)
       
     }else{
       

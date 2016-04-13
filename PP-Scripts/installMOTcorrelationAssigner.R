@@ -2,7 +2,7 @@ source("http://www.bioconductor.org/biocLite.R")
 biocLite(c('RColorBrewer',
            'impute',
            'ggthemes',
-           'ggplot2',
+           'ggplot2','grid',
            'reshape','httr','curl',
            'scales','devtools'), ask = FALSE)
 

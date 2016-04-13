@@ -23,7 +23,7 @@ function(base_size=14, base_family="Helvetica") {
            legend.key.size= unit(0.5, "cm"),
            legend.margin = unit(0, "cm"),
            legend.title = element_text(face="italic"),
-           plot.margin=unit(c(10,5,5,5),"mm"),
+           plot.margin=grid::unit(c(10,5,5,5),"mm"),
            strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),
            strip.text = element_text(face="bold")
    ))
