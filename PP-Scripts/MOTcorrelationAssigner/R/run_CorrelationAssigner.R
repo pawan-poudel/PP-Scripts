@@ -21,13 +21,13 @@ function(project_folder, signatures, sd=0, outputdir, sig_file){
   sample_info_files <- list.files(path=outputdir, pattern="sample_info.txt", full.names = TRUE, recursive=TRUE)
   
   # merging the sample info files
-  sample_info <- do.call("rbind", lapply(sample_info_files, read.table, header=TRUE) ) 
+  sample_info <- do.call("rbind", lapply(sample_info_files, read.delim2, header=TRUE) )
   
   # getting rid with the digits
   sample_info[,2] <- gsub("\\d","",sample_info[,2])
   
   # merging the files
-  merged_file <- do.call("rbind", lapply(correlation_mapped_files, read.table, header=TRUE) ) 
+  merged_file <- do.call("rbind", lapply(correlation_mapped_files, read.delim2, header=TRUE) )
   
   m1 <- match(merged_file[,1], sample_info[,1])
   w1 <- which(!is.na(m1))
