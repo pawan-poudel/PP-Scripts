@@ -26,7 +26,14 @@ function(data_1, file){
   legend("topright",bty = "n",c("means","median","standard deviations"),col=1:3,text.col=1:3,pch=1)
   dev.off()
   
-  z_score=apply(data[,-1], 1,standardise_data)
+  z_score=apply(data[,-1], 1,function(x){
+      mean_d=mean(x)
+      var_d=var(x)
+      
+      std_data=(x - mean_d)/sqrt(var_d)
+      return(std_data)
+      
+  })
   zscore_plot_f=gsub(".pdf", "zscore.pdf", file)
   pdf(zscore_plot_f)
   par(mfrow=c(1,2))

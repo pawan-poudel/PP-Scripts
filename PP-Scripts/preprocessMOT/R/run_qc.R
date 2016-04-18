@@ -70,7 +70,7 @@ function (folder_location, final_dir){
   write.table(data_exp_final, ff, sep="\t", row.names=FALSE, quote = FALSE)
   
   # performing QC part 2
-  check_dist_zscore_coor(ff)
+  check_dist_zscore_coor(ff, final_dir)
   
   # using affymetrics qc tool to do the QC and produce figures
   #qc_affy(folder_location, fd, user)

@@ -1,5 +1,7 @@
 check_dist_zscore_coor <-
-function(file){
+function(file, output_dir){
+  
+  out_file <- paste0(output_dir,"/" , gsub(".+\\/", "", file) )
   
   my_file=read.delim2(file, sep="\t", header=TRUE)
   samples=colnames(my_file)[-1]
@@ -15,15 +17,15 @@ function(file){
     my_imputed_file=impute_missing_values(my_file)
     
     #settting the filename for the imputed file
-    filename=gsub(".txt","imputed.txt", file)
-    filename_coor=gsub(".txt", "_imputed_samples_corr_corrected.txt", file)
+    filename=gsub(".txt","imputed.txt", out_file)
+    filename_coor=gsub(".txt", "_imputed_samples_corr_corrected.txt", out_file)
     
   }else{
     
     my_imputed_file=my_file
     #settting the filename for the imputed file
-    filename=file
-    filename_coor=gsub(".txt", "_samples_corr_corrected.txt", file)
+    filename=out_file
+    filename_coor=gsub(".txt", "_samples_corr_corrected.txt", out_file)
     
   }
   
@@ -34,15 +36,15 @@ function(file){
   colnames(my_imputed_file_final)[1] <- "Genes"
   
   #creating the organ wise pca plot for batch correction
-  batch_plot_f <- gsub(".txt", "PCA-plot-part2-QC.pdf", file)
+  batch_plot_f <- gsub(".txt", "PCA-plot-part2-QC.pdf", out_file)
   info="before batch correction"
   makePcaPlot(x = my_imputed_file_final, sample_info=sample_info, title = info, plot_file = batch_plot_f)
   
-  median_file=gsub(".txt", "_median.pdf", file)
+  median_file=gsub(".txt", "_median.pdf", out_file)
   #plotting the mean, median and sd of the data
   plot_mean_median(my_imputed_file_final, median_file)
   
-  hist_file=gsub(".txt", "historgram.pdf", file)
+  hist_file=gsub(".txt", "historgram.pdf", out_file)
   #plotting the histogram
   plot_hist(my_imputed_file_final, hist_file)
   #checking the sample sample correlation and writing the output

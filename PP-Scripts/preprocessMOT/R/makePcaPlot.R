@@ -18,6 +18,7 @@ function(x, sample_info,  plot_file, title = "") {
   
   data <- t(apply(dx, 1, scale))
   mydata <- t(data)
+  
   rownames(mydata) <- colnames(data.1)
   mydata.pca <- prcomp(mydata, retx=TRUE, center=TRUE, scale.=TRUE)
   
@@ -42,7 +43,7 @@ function(x, sample_info,  plot_file, title = "") {
   
   write.table(scores, score_file, sep="\t")
   
-  ggsave(p, file=plot_file)
+  ggsave(p, filename=plot_file)
   
   return(df)
   

@@ -3,12 +3,11 @@
 \alias{preprocessMOT}
 \docType{package}
 \title{
-A package for pre-processing of MOTassinger data files
+A package for pre-processing of MOTassinger data files.
 }
 \description{
-This package contains scripts used for pre-processing of MOTassinger data files. Ideally suited for preprocessing of raw affymetrics .CEL files.
-However, this package can perform initial quality control (data distribution, sample-sample correlation, PCA) of data derived from any platform. Please note that
-the Rcodes used in this package is taken from various sources.
+This package contains scripts used for pre-processing of MOTassinger data files. Ideally suited for preprocessing of raw Affymetrix .CEL files.
+However, this package can perform initial quality control (data distribution, sample-sample correlation, PCA) of data derived from any platform. Please note that the R codes used in this package have been adapted from various sources.
 }
 \details{
 \tabular{ll}{
@@ -22,10 +21,11 @@ License: \tab GPL-2 \cr
 }
 \author{
 Pawan Poudel
-Maintainer: Pawan Poudel, paawanpudel@gmail.com
+
+Maintainer: Pawan Poudel, paawanpoudel@gmail.com
 }
 \references{
-	This package is the part of MOTassigner 2016 paper, which performs QC of the dataset used in the paper.
+	This package is the part of the MOTassigner Sadanandam et al. 2016 paper, which performs QC of the dataset used in the paper.
 }
 
 \keyword{package}

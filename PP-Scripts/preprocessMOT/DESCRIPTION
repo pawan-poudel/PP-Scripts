@@ -1,8 +1,6 @@
 Package: preprocessMOT
 Type: Package
-Title: Preprocessing of different MOTassigner datasets used in the
-        paper. Additionally, performs QC of Affymetrics (preferably
-        Hgu133Plus2 arrays) using raw .CEL files.
+Title: Preprocessing of different MOTassigner datasets used in the paper. Additionally, performs QC of Affymetrics (preferably Hgu133Plus2 arrays) using raw .CEL files.
 Version: 1.0
 Date: 2016-03-03
 Author: Pawan Poudel
@@ -11,7 +9,18 @@ Description: This package takes a data matrix (genes/features in the first colum
 License: GPL-2
 NeedsCompilation: no
 Encoding: UTF-8
-Packaged: 2016-03-04 13:11:28 UTC; ppoudel
-Imports: AnnotationDbi, hgu133plus2.db, affyPLM, RColorBrewer, sva,
-        affy, impute, lattice, matrixStats, grid, ggthemes, ggplot2,
-        reshape, scales
+Packaged: 2016-03-04 09:42:16 UTC; ppoudel
+Imports:
+	AnnotationDbi,
+	hgu133plus2.db,
+	affyPLM,
+	RColorBrewer,
+	affy,
+	impute,
+	lattice,
+	matrixStats,
+	grid,
+	ggthemes,
+	ggplot2,
+	reshape,
+	scales

@@ -9,10 +9,13 @@ function(data, file1, filename_coor){
   
   # creating the new matrix
   new_M=M[,]>0.99
+  
   #creates the data frame of the very similar samples
   similar_samples_data_frame=which(new_M, arr.ind = TRUE)
+  
   # form the similar samples data frame
   similar_samples_index=similar_samples_data_frame[which(similar_samples_data_frame[,1]!=similar_samples_data_frame[,2]),]
+  
   #wirting the repeating samples to the files
   log_f=paste0(file1, "_R_logs.txt" )
   

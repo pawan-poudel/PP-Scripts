@@ -8,17 +8,20 @@ theme_Publication(base_size = 14, base_family = "Helvetica")
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{base_size}{
-font size for the plot
+font size for the plot text.
 }
   \item{base_family}{
-font family
+font family for the plot text.
 }
 }
 \details{
-Additional setting for the ggplot
+Additional setting for ggplot.
 }
 \references{
-Anguraj Sadanandam, et all (2016), MOTassigner
+Anguraj Sadanandam, et al. (2016), MOTassigner
+}
+\author{
+Pawan Poudel paawanpoudel@gmail.com
 }
 
 \examples{
